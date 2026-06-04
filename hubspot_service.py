@@ -1,10 +1,8 @@
 import requests
 import os 
 import dotenv 
-# from config import HUBSPOT_TOKEN
 
 dotenv.load_dotenv()
-# TOKEN = HUBSPOT_TOKEN
 TOKEN = os.getenv("HUBSPOT_TOKEN")
 
 headers = {
