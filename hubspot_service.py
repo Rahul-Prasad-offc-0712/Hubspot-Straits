@@ -1,8 +1,11 @@
 import requests
-import os
-from config import HUBSPOT_TOKEN
+import os 
+import dotenv 
+# from config import HUBSPOT_TOKEN
 
-TOKEN = HUBSPOT_TOKEN
+dotenv.load_dotenv()
+# TOKEN = HUBSPOT_TOKEN
+TOKEN = os.getenv("HUBSPOT_TOKEN")
 
 headers = {
     "Authorization": f"Bearer {TOKEN}",
@@ -31,7 +34,7 @@ def update_integration_link(contact_id):
     )
 
     integration_link = (
-        f"http://127.0.0.1:5000/integrate/{contact_id}"
+        f"https://hubspot-straits.onrender.com/integrate/{contact_id}"
     )
 
     payload = {
@@ -97,7 +100,7 @@ def update_company_integration_link(company_id):
     )
 
     integration_link = (
-        f"http://127.0.0.1:5000/company-preview/{company_id}"
+        f"https://hubspot-straits.onrender.com/company-preview/{company_id}"
     )
 
     payload = {
