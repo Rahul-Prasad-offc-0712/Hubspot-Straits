@@ -579,7 +579,7 @@ scheduler = BackgroundScheduler()
 scheduler.add_job(
     auto_sync_links,
     "interval",
-    seconds=30
+    seconds=10
 )
 
 scheduler.start()
