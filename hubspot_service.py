@@ -1,10 +1,8 @@
 import requests
 import os
-from dotenv import load_dotenv
+from config import HUBSPOT_TOKEN
 
-load_dotenv()
-
-TOKEN = os.getenv("HUBSPOT_TOKEN")
+TOKEN = HUBSPOT_TOKEN
 
 headers = {
     "Authorization": f"Bearer {TOKEN}",
