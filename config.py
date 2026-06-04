@@ -1,1 +1,3 @@
-# HUBSPOT_TOKEN="pat-na2-b3d3aa54-650e-48ab-bb99-3316d56e6235"
+import os
+
+HUBSPOT_TOKEN = os.getenv("HUBSPOT_TOKEN")
