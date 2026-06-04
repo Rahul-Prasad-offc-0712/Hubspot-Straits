@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Preview</title>
+</head>
+<body>
+
+    <h1>Employee Preview</h1>
+
+    <h3>Employee Details</h3>
+
+    <p><strong>Name:</strong> {{ employee.full_name }}</p>
+
+    <p><strong>Email:</strong> {{ employee.email }}</p>
+
+    <hr>
+
+    <h3>Organization Login</h3>
+
+    <form method="POST">
+
+        <label>Organization Email</label>
+        <br>
+        <input type="email" name="org_email" required>
+        <br><br>
+
+        <label>Organization Password</label>
+        <br>
+        <input type="password" name="org_password" required>
+        <br><br>
+
+        <button type="submit">
+            Create Employee In Straits
+        </button>
+
+    </form>
+
+</body>
+</html>

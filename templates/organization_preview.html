@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>
+        Organization Integration
+    </title>
+
+    <style>
+
+        body {
+
+            font-family: Arial, sans-serif;
+
+            background: #f4f7fb;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            height: 100vh;
+
+            margin: 0;
+        }
+
+        .container {
+
+            background: white;
+
+            width: 450px;
+
+            padding: 30px;
+
+            border-radius: 12px;
+
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+
+            text-align: center;
+
+            color: #1e293b;
+
+            margin-bottom: 25px;
+        }
+
+        label {
+
+            display: block;
+
+            margin-bottom: 6px;
+
+            font-weight: bold;
+
+            color: #334155;
+        }
+
+        input {
+
+            width: 100%;
+
+            padding: 12px;
+
+            border: 1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            margin-bottom: 18px;
+
+            font-size: 14px;
+
+            box-sizing: border-box;
+        }
+
+        input[readonly] {
+
+            background: #f1f5f9;
+
+            cursor: not-allowed;
+        }
+
+        button {
+
+            width: 100%;
+
+            padding: 14px;
+
+            border: none;
+
+            border-radius: 8px;
+
+            background: #2563eb;
+
+            color: white;
+
+            font-size: 16px;
+
+            font-weight: bold;
+
+            cursor: pointer;
+
+            transition: 0.3s;
+        }
+
+        button:hover {
+
+            background: #1d4ed8;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>
+            Integrate Organization With Straits
+        </h1>
+
+        <form method="POST">
+
+            <label>
+                Organization Name
+            </label>
+
+            <input
+                type="text"
+                name="name"
+                value="{{ organization.name }}"
+                readonly
+            >
+
+            <label>
+                Organization Type
+            </label>
+
+            <input
+                type="text"
+                name="type"
+                value="{{ organization.type }}"
+                readonly
+            >
+
+            <label>
+                Description
+            </label>
+
+            <input
+                type="text"
+                name="description"
+                value="{{ organization.description }}"
+                readonly
+            >
+
+            <label>
+                Employees Count
+            </label>
+
+            <input
+                type="text"
+                name="employeesCount"
+                value="{{ organization.employeesCount }}"
+                readonly
+            >
+
+            <label>
+                Smartarch Email
+            </label>
+
+            <input
+                type="email"
+                name="smartarch_email"
+                value="{{ email }}"
+                required
+            >
+
+            <label>
+                Smartarch Password
+            </label>
+
+            <input
+                type="password"
+                name="smartarch_password"
+                required
+            >
+
+            <button type="submit">
+
+                Create Organization In Straits
+
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Company Integration</title>
+</head>
+
+<body>
+
+    <h1>Integrate Organization With Straits</h1>
+
+    <form method="POST">
+
+        <label>Organization Name</label>
+        <input
+            type="text"
+            name="name"
+            value="{{ company.name }}"
+        >
+        <br><br>
+
+        <label>Organization Type</label>
+        <input
+            type="text"
+            name="type"
+            value="{{ company.type }}"
+        >
+        <br><br>
+
+        <label>Description</label>
+        <input
+            type="text"
+            name="description"
+            value="{{ company.description }}"
+        >
+        <br><br>
+
+        <label>Employees Count</label>
+        <input
+            type="text"
+            name="employeesCount"
+            value="{{ company.employeesCount }}"
+        >
+        <br><br>
+
+        <label>Smartarch Email</label>
+        <input
+            type="email"
+            name="smartarch_email"
+        >
+        <br><br>
+
+        <label>Smartarch Password</label>
+        <input
+            type="password"
+            name="smartarch_password"
+        >
+        <br><br>
+
+        <button type="submit">
+            Integrate Organization
+        </button>
+
+    </form>
+
+</body>
+</html>
