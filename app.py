@@ -574,29 +574,22 @@ def auto_sync_links():
 # =====================================================
 # MAIN
 # =====================================================
+scheduler = BackgroundScheduler()
+
+scheduler.add_job(
+    auto_sync_links,
+    "interval",
+    seconds=30
+)
+
+scheduler.start()
+
+print("✅ Scheduler Started")
+
+# FIRST RUN
+auto_sync_links()
+
+
 if __name__ == "__main__":
 
-    scheduler = BackgroundScheduler()
-
-    scheduler.add_job(
-
-        auto_sync_links,
-
-        "interval",
-
-        seconds=30
-    )
-
-    scheduler.start()
-
-    print(
-        "✅ Scheduler Started"
-    )
-
-    # FIRST RUN IMMEDIATELY
-
-    auto_sync_links()
-
-    app.run(
-        debug=True
-    )
+    app.run(debug=True)
