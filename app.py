@@ -29,42 +29,42 @@ app = Flask(__name__)
 # HOME
 # =====================================================
 
-@app.route("/")
-def home():
-
-    return {
-        "message":
-            "HubSpot-Straits Integration Running"
-    }
-
 # @app.route("/")
 # def home():
 
-#     contacts_data = get_all_contacts()
+#     return {
+#         "message":
+#             "HubSpot-Straits Integration Running"
+#     }
 
-#     contacts = contacts_data.get(
-#         "results",
-#         []
-#     )
+@app.route("/")
+def home():
 
-#     # AUTO UPDATE CONTACT LINKS
+    contacts_data = get_all_contacts()
 
-#     for contact in contacts:
+    contacts = contacts_data.get(
+        "results",
+        []
+    )
 
-#         contact_id = contact["id"]
+    # AUTO UPDATE CONTACT LINKS
 
-#         try:
+    for contact in contacts:
 
-#             update_integration_link(
-#                 contact_id
-#             )
+        contact_id = contact["id"]
 
-#         except Exception as e:
+        try:
 
-#             print(
-#                 "CONTACT LINK ERROR:",
-#                 e
-#             )
+            update_integration_link(
+                contact_id
+            )
+
+        except Exception as e:
+
+            print(
+                "CONTACT LINK ERROR:",
+                e
+            )
 
 
 
