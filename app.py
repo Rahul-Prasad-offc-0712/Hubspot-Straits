@@ -2,6 +2,10 @@ from flask import Flask, render_template, request
 import requests
 from apscheduler.schedulers.background import BackgroundScheduler
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 from hubspot_service import (
     get_contact,
     update_integration_link,
