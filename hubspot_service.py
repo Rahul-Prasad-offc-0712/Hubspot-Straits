@@ -32,7 +32,7 @@ def update_integration_link(contact_id):
     )
 
     integration_link = (
-        f"https://hubspot-straits.onrender.com/integrate/{contact_id}"
+        f"http://34.131.130.76:5000/integrate/{contact_id}"
     )
 
     payload = {
@@ -98,7 +98,7 @@ def update_company_integration_link(company_id):
     )
 
     integration_link = (
-        f"https://hubspot-straits.onrender.com/company-preview/{company_id}"
+        f"http://34.131.130.76:5000/company-preview/{company_id}"
     )
 
     payload = {
